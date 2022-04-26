@@ -1,30 +1,66 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <div class="nav_logo">
+      <h2 class="nav_logo">La Fountaine Bake Factory</h2>
+    </div>
+    <div class="nav_links">
+      <router-link to="/" class="nav_link">Inicio</router-link>
+      <router-link to="/sabores" class="nav_link">Sabores</router-link>
+      <router-link to="/adornos" class="nav_link">Adornos</router-link>
+    </div>
   </nav>
   <router-view/>
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+*{
+  font-family: "Noto Serif", serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 nav {
-  padding: 30px;
+  min-height: 8vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #f6ecdd;
+  color: #524942;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.nav_logo {
+  color: #524942;
+  font-size: 25px;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.nav_links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.nav_links a{
+  color: #524942;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav_links a:hover {
+  color: #E1C699;
+}
+
+.nav_links li {
+  list-style-type: none;
 }
 </style>
